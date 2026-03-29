@@ -97,7 +97,7 @@ body {
     line-height: 1.6; 
 }
 
-/* LINKS DAS ESPECIALIDADES (Frente) - AJUSTADO VISITED */
+/* LINKS DAS ESPECIALIDADES (Frente) */
 .spec-item, 
 .spec-item:visited {
     text-decoration: none;
@@ -126,7 +126,7 @@ body {
     width: 135px; 
     height: 135px;
     border: 2px solid #553a2a;
-    padding: 5px; /* Borda branca fina e elegante */
+    padding: 5px;
     border-radius: 8px;
     background: white;
     display: flex;
@@ -140,7 +140,7 @@ body {
     object-fit: contain;
 }
 
-/* BLOCO DE CONTATO - AJUSTADO COM :VISITED */
+/* BLOCO DE CONTATO */
 .contact-info-block {
     display: flex;
     flex-direction: column;
@@ -163,10 +163,12 @@ body {
     outline: none; 
 }
 
-/* HOVER UNIFICADO (Frente e Verso) */
-.link-contato:hover, 
-.spec-item:hover { 
-    color: #0000EE; 
+/* HOVER APENAS PARA COMPUTADOR (Evita travar azul no mobile) */
+@media (hover: hover) {
+    .link-contato:hover, 
+    .spec-item:hover { 
+        color: #0000EE; 
+    }
 }
 
 .whatsapp-icon {
@@ -219,8 +221,8 @@ body {
     }
 
     .logo-img {
-        width: 22vw; 
-        max-width: 110px;
+        width: 30vw; 
+        max-width: 130px;
     }
 
     .name { 
@@ -232,10 +234,10 @@ body {
         width: 95%;
     }
 
- .logo-verso {
-    width: 50vw;
-    max-width: 150px;
-}
+    .logo-verso {
+        width: 15vw; /* Corrigido de 50vw para 15vw */
+        max-width: 60px;
+    }
 
     /* Ajuste da moldura no celular */
     .qrcode-border {
@@ -243,12 +245,19 @@ body {
         height: 28vw;
         max-width: 130px;
         max-height: 130px;
-        padding: 5px; /* Espaçamento corrigido para mobile */
+        padding: 5px;
     }
 
     .link-contato,
     .link-contato:visited { 
         font-size: 3.5vw; 
+    }
+
+    /* Efeito de clique (Active) no Celular */
+    .link-contato:active, 
+    .spec-item:active { 
+        color: #0000EE;
+        transition: 0s;
     }
 
     .whatsapp-float {
