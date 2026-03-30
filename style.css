@@ -19,6 +19,8 @@ body {
     background-size: 150px 150px, 30px 30px, 30px 30px;
 }
 
+
+
 /* CONTAINER QUE ORGANIZA OS CARTÕES */
 .card-container {
     display: flex;
